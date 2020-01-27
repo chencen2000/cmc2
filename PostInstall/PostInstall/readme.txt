@@ -1,0 +1,11 @@
+﻿PostInstall will executed after installation.
+1. input the folder of cmc installation.
+2. download the CMC-INSTALLATION, from CMC base on the config.ini
+### get cinfig.ini
+fdcheckserial.exe -s 521eb3dd-47f0-40ef-9b54-30466dfe6cc7 -d .
+
+### list prl packages 
+GET http://cmcqa.futuredial.com/api/listpkgs/
+    ?type=prl    
+    &solutionid=45
+    &productid=55
