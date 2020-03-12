@@ -1,6 +1,13 @@
 ﻿PostInstall will executed after installation.
-1. input the folder of cmc installation.
+1. input the folder of cmc installation, the config.ini should already exists.
 2. download the CMC-INSTALLATION, from CMC base on the config.ini
+config.ini
+pitype=<prl|phonedll>
+piid=[readableid]
+
+
+
+
 ### get cinfig.ini
 fdcheckserial.exe -s 521eb3dd-47f0-40ef-9b54-30466dfe6cc7 -d .
 OR
