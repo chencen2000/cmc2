@@ -71,7 +71,7 @@ namespace PostInstall
                 PowerShellInstance.AddScript(@"$PSVersionTable");
                 Collection<PSObject> PSOutput1 = PowerShellInstance.Invoke();
 
-                PowerShellInstance.AddScript(@"C:\projects\temp\test.ps1");
+                PowerShellInstance.AddScript(@"C:\projects\temp\test.ps1", true);
 
                 //Collection<PSObject> PSOutput = PowerShellInstance.Invoke();
                 //foreach (PSObject outputItem in PSOutput)
@@ -98,7 +98,7 @@ namespace PostInstall
                 {
                     foreach(InformationRecord i in PowerShellInstance.Streams.Information)
                     {
-
+                        System.Console.Out.WriteLine($"[{i.TimeGenerated}]: {i.MessageData}");
                     }
                 }
 
