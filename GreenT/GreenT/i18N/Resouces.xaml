@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="ResourceDictionaryName">Loc-en-US</sys:String>
+    
+    <sys:String x:Key="WindowTitle">Lean One Touch</sys:String>
+    <sys:String x:Key="NotConnted">Not Connect</sys:String>
+    <sys:String x:Key="DeviceConnted">Connected</sys:String>
+
+    <sys:String x:Key="Language">Switch Language</sys:String>
+    <sys:String x:Key="PhoneList">Support Device List</sys:String>
+    <sys:String x:Key="ErrorCodeList">Error Code Defination</sys:String>
+
+    <sys:String x:Key="Plugindevice">Plug in a Device</sys:String>
+    <sys:String x:Key="Devicenotready">Device Not Ready</sys:String>
+</ResourceDictionary>
+    

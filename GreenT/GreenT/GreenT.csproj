@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B33A0BBE-BA15-44D5-AD3B-6F39CF541382}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GreenT</RootNamespace>
+    <AssemblyName>GreenT</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Common\Constant.cs" />
+    <Compile Include="Common\ProgressBarConverter.cs" />
+    <Compile Include="Common\RatioConverter.cs" />
+    <Compile Include="LocUtil.cs" />
+    <Compile Include="Models\ProcessControlM.cs" />
+    <Compile Include="Models\UserControlM.cs" />
+    <Compile Include="Models\PanelControlM.cs" />
+    <Compile Include="Models\TimerModel.cs" />
+    <Compile Include="Models\UIConfigM.cs" />
+    <Compile Include="TaskControl.xaml.cs">
+      <DependentUpon>TaskControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessControl.xaml.cs">
+      <DependentUpon>ProcessControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ResultControl.xaml.cs">
+      <DependentUpon>ResultControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\PanelControlView.cs" />
+    <Compile Include="ViewModels\ProcessControlView.cs" />
+    <Compile Include="ViewModels\WindowBase.cs" />
+    <Page Include="ProcessControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResultControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Resource Include="icon\Android Reactivation Lock_FAILURE.png" />
+    <Resource Include="icon\Android Reactivation Lock_LOCKED.png" />
+    <Resource Include="icon\Android Reactivation Lock_UNKNOWN.png" />
+    <Resource Include="icon\Battery Status_BAD.png" />
+    <Resource Include="icon\Battery Status_GOOD.png" />
+    <Resource Include="icon\Battery Status_UNKNOWN.png" />
+    <Resource Include="icon\big.png" />
+    <Resource Include="icon\box-black.png" />
+    <Resource Include="icon\box-blue.png" />
+    <Resource Include="icon\box-grayBlue.png" />
+    <Resource Include="icon\box-grayBlue2.png" />
+    <Resource Include="icon\box-green.png" />
+    <Resource Include="icon\box-greenRed.png" />
+    <Resource Include="icon\box-orange.png" />
+    <Resource Include="icon\box-red.png" />
+    <Resource Include="icon\box-redyellow.png" />
+    <Resource Include="icon\box-thinkRed.png" />
+    <Resource Include="icon\box-white.png" />
+    <Resource Include="icon\box-yellow.png" />
+    <Resource Include="icon\btnFindiPhone.png" />
+    <Resource Include="icon\btnFindiPhonefailure.png" />
+    <Resource Include="icon\btnFindiPhoneunknown.png" />
+    <Resource Include="icon\btnshowPhonePic.png" />
+    <Resource Include="icon\bubble_left.png" />
+    <Resource Include="icon\closewindow.png" />
+    <Resource Include="icon\config.png" />
+    <Resource Include="icon\counterfeit.png" />
+    <Resource Include="icon\empty.png" />
+    <Resource Include="icon\ErrorInfo.png" />
+    <Resource Include="icon\FD_Logo.png" />
+    <Resource Include="icon\FindMyAndroid_Detected.png" />
+    <Resource Include="icon\FourteenColor.png" />
+    <Resource Include="icon\head_1.png" />
+    <Resource Include="icon\imageStole.png" />
+    <Resource Include="icon\info.png" />
+    <Resource Include="icon\Insert_SIM.png" />
+    <Resource Include="icon\JBtest.png" />
+    <Resource Include="icon\lightbulbconfig3.png" />
+    <Resource Include="icon\Loading.gif" />
+    <Resource Include="icon\loading.png" />
+    <Resource Include="icon\lock.png" />
+    <Resource Include="icon\lockstatus.png" />
+    <Resource Include="icon\lock_open.png" />
+    <Resource Include="icon\mediafailure.png" />
+    <Resource Include="icon\mediasus.png" />
+    <Resource Include="icon\MSet.png" />
+    <Resource Include="icon\Next.png" />
+    <Resource Include="icon\NoFlash.png" />
+    <Resource Include="icon\ok_24.png" />
+    <Resource Include="icon\OpacityNext.png" />
+    <Resource Include="icon\phone.png" />
+    <Resource Include="icon\PNG_48 x48 Size_Failure to Erase MDN_Design 1.png" />
+    <Resource Include="icon\PNG_48 x48 Size_Power ON and Enable ADB.png" />
+    <Resource Include="icon\PNG_FAILURE Button-BLANK_UP.png" />
+    <Resource Include="icon\PNG_SUCCESS Button-BLANK_UP.png" />
+    <Resource Include="icon\PNG_WiFi Profile Loading_Failure.png" />
+    <Resource Include="icon\PNG_WiFi Profile Loading_Success.png" />
+    <Resource Include="icon\popupbg.png" />
+    <Resource Include="icon\printer.png" />
+    <Resource Include="icon\PrintMain.png" />
+    <Resource Include="icon\PrintNOTSuccessful.png" />
+    <Resource Include="icon\PrintSuccessful.png" />
+    <Resource Include="icon\red.png" />
+    <Resource Include="icon\remove_sd.png" />
+    <Resource Include="icon\remove_SIM.PNG" />
+    <Resource Include="icon\rooted.png" />
+    <Resource Include="icon\Samsung Reactivation Lock_FAILURE.png" />
+    <Resource Include="icon\Samsung Reactivation Lock_LOCKED.png" />
+    <Resource Include="icon\Samsung Reactivation Lock_UNKNOWN.png" />
+    <Resource Include="icon\sdcard.PNG" />
+    <Resource Include="icon\SG.png" />
+    <Resource Include="icon\simcard.png" />
+    <Resource Include="icon\wrong_24.png" />
+    <Resource Include="icon\XMLGenerationFailed.png" />
+    <Resource Include="icon\yellow.png" />
+    <Page Include="i18N\Resouces.en-US.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="TaskControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Content Include="i18N\Resouces.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Page Include="i18N\Resouces.zh-CN.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

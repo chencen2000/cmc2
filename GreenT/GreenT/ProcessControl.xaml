@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="GreenT.ProcessControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GreenT"
+             xmlns:converters="clr-namespace:GreenT.Common"
+             mc:Ignorable="d" 
+             MinHeight="150" MinWidth="300">
+
+    <UserControl.Resources>
+        <converters:ProgressBarConverter x:Key="prgBarConverter"/>
+    </UserControl.Resources>
+    <Border Margin="4" x:Name="bckBorder"
+                BorderBrush="White"
+                Background="{Binding ProcessCM.Background}"
+                BorderThickness="1,1,1,1"
+                CornerRadius="8,8,8,8">
+        
+        <Grid Margin="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Label x:Name="labelInfo" Margin="10" Grid.Row="0"
+                        Content="{Binding ProcessCM.LabelConnect}"
+                        FontSize="24"
+                        FontWeight="Bold" />
+            <ProgressBar Name="pbStatus" Grid.Row="1" Value="{Binding ProcessCM.ProcessValue}"  
+                         Minimum="0" Maximum="100" Height="18"/>
+            <Label  Grid.Row="1" Content="{Binding ElementName=pbStatus, Path=Value, Converter={StaticResource prgBarConverter}}"
+                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+            <Label Name="lblDeviceName" Margin="10" Grid.Row="2"
+                        Content="{Binding ProcessCM.ModelName}"
+                        MouseDoubleClick="Label_MouseDoubleClick" />
+
+            <Label Name="lblUniqueID" Margin="10" Grid.Row="3"
+                        Content="{Binding ProcessCM.UniqueID}" />
+
+            <Label Name="lblOperation"  Margin="10" Grid.Row="4"
+                        Content="{Binding ProcessCM.OperationStatus}" />
+        </Grid>
+        <Border.Effect>
+            <DropShadowEffect Color="Gray" Opacity="0.5" />
+        </Border.Effect>
+    </Border>
+</UserControl>
