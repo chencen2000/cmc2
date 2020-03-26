@@ -19,6 +19,14 @@ namespace TaskEng
         [OperationContract]
         [WebGet(UriTemplate = "info")]
         Stream get_info();
+        
+        [OperationContract]
+        [WebGet(UriTemplate = "uichange")]
+        Stream get_uichange();
+
+        [OperationContract]
+        [WebInvoke(UriTemplate = "debug")]
+        Stream debug(Stream ins);
     }
     class Program : ITaskEngine
     {
@@ -81,6 +89,8 @@ namespace TaskEng
             {
                 Args.Add("workdir", System.IO.Path.GetDirectoryName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName));
             }
+            if (!Args.ContainsKey("port"))
+                Args["port"] = "1210";
             // dump args
             logIt($"dump args: ");
             foreach(KeyValuePair<string,object> kvp in Args)
@@ -149,6 +159,10 @@ namespace TaskEng
             }
             return ret;
         }
+        #region debug
+
+        #endregion
+
         #region ITaskEngine
         public Stream get_info()
         {
@@ -164,6 +178,78 @@ namespace TaskEng
                 System.ServiceModel.Web.WebOperationContext op = System.ServiceModel.Web.WebOperationContext.Current;
                 op.OutgoingResponse.Headers.Add("Content-Type", "application/json");
                 ret = new MemoryStream(System.Text.Encoding.UTF8.GetBytes(o.ToString()));
+            }
+            catch (Exception) { }
+            return ret;
+        }
+        public Stream get_uichange()
+        {
+            Stream ret = null;
+            try
+            {
+                if (System.Threading.Monitor.TryEnter(this))
+                {
+                    // hold 60 seconds
+                    DateTime _start = DateTime.Now;
+                    bool done = false;
+                    while(!done && (DateTime.Now - _start).TotalSeconds < 60)
+                    {
+                        // for debug
+                        try
+                        {
+                            string s = System.IO.File.ReadAllText(Args["testdata"] as string);
+                            JavaScriptSerializer jss = new System.Web.Script.Serialization.JavaScriptSerializer();
+                            Dictionary<string, object> test_data = jss.Deserialize<Dictionary<string, object>>(s);
+                            if (test_data.ContainsKey("uichange") && test_data["uichange"].GetType() == typeof(Dictionary<string, object>))
+                            {
+                                Dictionary<string, object> uichange = (Dictionary<string, object>)test_data["uichange"];
+                                if (uichange.Count > 0)
+                                {
+                                    uichange["error"] = 0;
+                                    s = jss.Serialize(uichange);
+                                    ret = new MemoryStream(System.Text.Encoding.UTF8.GetBytes(s));
+                                    done = true;
+                                    test_data["uichange"] = new Dictionary<string, object>();
+                                    s = jss.Serialize(test_data);
+                                    System.IO.File.WriteAllText(Args["testdata"] as string, s);
+                                }
+                            }
+                        }
+                        catch (Exception) { }
+
+                        if (!done)
+                            System.Threading.Thread.Sleep(1000);
+                    }
+                }
+                else
+                {
+                    logIt("Other thread already monitoring.");
+                }
+            }
+            catch (Exception) { }
+            finally
+            {
+                try
+                {
+                    System.Threading.Monitor.Exit(this);
+                }
+                catch (Exception) { }
+            }
+            System.ServiceModel.Web.WebOperationContext.Current.OutgoingResponse.Headers.Add("Content-Type", "application/json");
+            return ret;
+        }
+        public Stream debug(Stream ins)
+        {
+            Stream ret = null;
+            try
+            {
+                using(StreamReader sr = new StreamReader(ins))
+                {
+                    string s = sr.ReadToEnd();
+                    System.Web.Script.Serialization.JavaScriptSerializer jss = new JavaScriptSerializer();
+                    Dictionary<string, object> data = jss.Deserialize<Dictionary<string, object>>(s);
+
+                }
             }
             catch (Exception) { }
             return ret;
