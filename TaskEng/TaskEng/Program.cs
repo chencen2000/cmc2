@@ -25,6 +25,10 @@ namespace TaskEng
         Stream get_uichange();
 
         [OperationContract]
+        [WebGet(UriTemplate = "ui/{label}/{name}")]
+        Stream get_uidata(string label, string name);
+
+        [OperationContract]
         [WebInvoke(UriTemplate = "debug")]
         Stream debug(Stream ins);
     }
@@ -252,6 +256,22 @@ namespace TaskEng
                 }
             }
             catch (Exception) { }
+            return ret;
+        }
+        public Stream get_uidata(string label, string name)
+        {
+            Stream ret = null;
+            System.Web.Script.Serialization.JavaScriptSerializer jss = new JavaScriptSerializer();
+            try
+            {
+                Dictionary<string, object> data = new Dictionary<string, object>();
+                data.Add("label", label);
+                data.Add("name", name);
+                string s = jss.Serialize(data);
+                ret = new MemoryStream(System.Text.Encoding.UTF8.GetBytes(s));
+            }
+            catch (Exception) { }
+            System.ServiceModel.Web.WebOperationContext.Current.OutgoingResponse.Headers.Add("Content-Type", "application/json");
             return ret;
         }
         #endregion

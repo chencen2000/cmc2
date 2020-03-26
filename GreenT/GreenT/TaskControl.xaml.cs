@@ -40,5 +40,9 @@ namespace GreenT
         {
             panelControlViewModel.SetConnect(bconn);
         }
+        public void updateUI()
+        {
+
+        }
     }
 }

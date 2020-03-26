@@ -24,5 +24,10 @@ namespace GreenT
         {
             InitializeComponent();
         }
+        public void updateUI()
+        {
+
+        }
+
     }
 }

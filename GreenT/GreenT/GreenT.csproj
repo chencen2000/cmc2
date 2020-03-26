@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -77,11 +78,61 @@
     <Compile Include="ViewModels\PanelControlView.cs" />
     <Compile Include="ViewModels\ProcessControlView.cs" />
     <Compile Include="ViewModels\WindowBase.cs" />
+    <Compile Include="Views\viewComplete.xaml.cs">
+      <DependentUpon>viewComplete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\viewDetected.xaml.cs">
+      <DependentUpon>viewDetected.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\viewDetecting.xaml.cs">
+      <DependentUpon>viewDetecting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\viewIdle.xaml.cs">
+      <DependentUpon>viewIdle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\viewNotDetect.xaml.cs">
+      <DependentUpon>viewNotDetect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\viewOperation.xaml.cs">
+      <DependentUpon>viewOperation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\viewTaskFailed.xaml.cs">
+      <DependentUpon>viewTaskFailed.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\viewComplete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\viewNotDetect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\viewOperation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\viewTaskFailed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Resource Include="Readme.txt" />
     <Page Include="ProcessControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ResultControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\viewDetected.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\viewDetecting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\viewIdle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
