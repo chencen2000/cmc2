@@ -65,13 +65,14 @@ namespace PostInstall
         {
             System.Environment.SetEnvironmentVariable("PSExecutionPolicyPreference", "Bypass");
 
-            string s = System.IO.File.ReadAllText(@"C:\projects\temp\test.ps1");
+            string s = System.IO.File.ReadAllText(@"test.ps1");
             using (PowerShell PowerShellInstance = PowerShell.Create())
             {
                 PowerShellInstance.AddScript(@"$PSVersionTable");
                 Collection<PSObject> PSOutput1 = PowerShellInstance.Invoke();
 
-                PowerShellInstance.AddScript(@"C:\projects\temp\test.ps1", true);
+                //PowerShellInstance.AddScript(@"C:\projects\temp\test.ps1", true);
+                PowerShellInstance.AddScript(s);
 
                 //Collection<PSObject> PSOutput = PowerShellInstance.Invoke();
                 //foreach (PSObject outputItem in PSOutput)

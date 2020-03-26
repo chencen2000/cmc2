@@ -1,0 +1,15 @@
+﻿<Window x:Class="twLauncher.MySplashScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:twLauncher"
+        mc:Ignorable="d"
+        Title="MySplashScreen" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid>
+        <Image x:Name="img" Margin="0" Source="Resources/FutureDial_SplashScreen.jpg" Stretch="Fill"/>
+        <Label x:Name="textStatus" Content="Initializing ..." HorizontalAlignment="Center" Margin="0,313,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
