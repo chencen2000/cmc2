@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
 using System.Linq;
-using System.Management.Automation;
-using System.Management.Automation.Runspaces;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
@@ -146,21 +144,21 @@ namespace TaskEng
         static object call_psscript(string fn, Dictionary<string,object> args)
         {
             object ret = null;
-            using (PowerShell PowerShellInstance = PowerShell.Create())
-            {
-                string s = System.IO.Path.Combine(Args["workdir"].ToString(), Args["taskfolder"].ToString(), $"{fn}.ps1");
-                PowerShellInstance.AddCommand(s);
-                foreach(KeyValuePair<string,object> kvp in args)
-                {
-                    PowerShellInstance.AddParameter(kvp.Key, kvp.Value);
-                }
-                IAsyncResult result = PowerShellInstance.BeginInvoke();
-                PSDataCollection<PSObject> PSOutput = PowerShellInstance.EndInvoke(result);
-                if (PSOutput.Count > 0)
-                {
-                    ret = PSOutput.Last<PSObject>().BaseObject;
-                }
-            }
+            //using (PowerShell PowerShellInstance = PowerShell.Create())
+            //{
+            //    string s = System.IO.Path.Combine(Args["workdir"].ToString(), Args["taskfolder"].ToString(), $"{fn}.ps1");
+            //    PowerShellInstance.AddCommand(s);
+            //    foreach(KeyValuePair<string,object> kvp in args)
+            //    {
+            //        PowerShellInstance.AddParameter(kvp.Key, kvp.Value);
+            //    }
+            //    IAsyncResult result = PowerShellInstance.BeginInvoke();
+            //    PSDataCollection<PSObject> PSOutput = PowerShellInstance.EndInvoke(result);
+            //    if (PSOutput.Count > 0)
+            //    {
+            //        ret = PSOutput.Last<PSObject>().BaseObject;
+            //    }
+            //}
             return ret;
         }
         #region debug
