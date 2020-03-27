@@ -1,1 +1,35 @@
-{"uichange":{},"label_1":{"GreenT.Views.view":{},"ResultControl":{},"ProcessControl":{}},"label_2":{"TaskControl":{},"ResultControl":{},"ProcessControl":{}},"label_3":{"TaskControl":{},"ResultControl":{},"ProcessControl":{}},"label_4":{"TaskControl":{},"ResultControl":{},"ProcessControl":{}},"label_5":{"TaskControl":{},"ResultControl":{},"ProcessControl":{}},"label_6":{"TaskControl":{},"ResultControl":{},"ProcessControl":{}}}
+{
+  "uichange": {
+
+  },
+  "label_1": {
+    "GreenT.Views.view": {},
+    "ResultControl": {},
+    "ProcessControl": {}
+  },
+  "label_2": {
+    "TaskControl": {},
+    "ResultControl": {},
+    "ProcessControl": {}
+  },
+  "label_3": {
+    "TaskControl": {},
+    "ResultControl": {},
+    "ProcessControl": {}
+  },
+  "label_4": {
+    "TaskControl": {},
+    "ResultControl": {},
+    "ProcessControl": {}
+  },
+  "label_5": {
+    "TaskControl": {},
+    "ResultControl": {},
+    "ProcessControl": {}
+  },
+  "label_6": {
+    "TaskControl": {},
+    "ResultControl": {},
+    "ProcessControl": {}
+  }
+}
