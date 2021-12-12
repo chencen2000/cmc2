@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rms_report>
+  <item id="" name="" operation="">
+    <status></status>
+    <total_count></total_count>
+    <total_size></total_size>
+    <success_transferred></success_transferred>
+    <skipped></skipped>
+    <skipped_items>
+      <skipped_item></skipped_item>
+      <skipped_item></skipped_item>
+      <skipped_item></skipped_item>
+    </skipped_items>
+  </item>
+</rms_report>

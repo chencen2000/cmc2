@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<profilexml>
+  <profilename>samsung_5_25_content_settings</profilename>
+  <deviceid>SAM_GALAXYII_USB_DCM</deviceid>
+  <company>Futuredial</company>
+  <timecreated>2012-05-24 11:14:31.000</timecreated>
+  <make>Samsung</make>
+  <model>Galaxy S2</model>
+  <firmware>No</firmware>
+  <firmwarelocation>
+  </firmwarelocation>
+  <pstsetting>
+  </pstsetting>
+  <refurbish>No</refurbish>
+  <refurbishflag>skip</refurbishflag>
+  <prl>No</prl>
+  <prllocation>
+  </prllocation>
+  <contacts>Phonebook.xml</contacts>
+  <calendars>
+  </calendars>
+  <documents>
+  </documents>
+  <images>Image.zip</images>
+  <applications>Application.zip</applications>
+  <ringtones>
+  </ringtones>
+  <music>
+  </music>
+  <video>
+  </video>
+  <theme>
+  </theme>
+  <wallpaper>
+  </wallpaper>
+  <contactsrule>
+  </contactsrule>
+  <calendarsrule>
+  </calendarsrule>
+  <documentsrule>
+  </documentsrule>
+  <imagesrule>
+  </imagesrule>
+  <applicationsrule>
+  </applicationsrule>
+  <ringtonesrule>
+  </ringtonesrule>
+  <musicrule>
+  </musicrule>
+  <videorule>
+  </videorule>
+  <themerule>
+  </themerule>
+  <wallpaperrule>
+  </wallpaperrule>
+</profilexml>

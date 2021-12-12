@@ -1,0 +1,80 @@
+<transDetails>
+	<transDetail id="16" groupid="2" title="Premium Content">
+		<type title="RMS Data">FDFile</type>
+		<processed title="Processed">5(343 KB)</processed>
+		<available title="Available">0</available>
+		<status title="Status">0</status>
+	</transDetail>
+	<transDetail id="15" groupid="2" title="Premium Content">
+		<type title="RMS Data">Music</type>
+		<processed title="Processed">4(91 KB)</processed>
+		<available title="Available">0</available>
+		<status title="Status">0</status>
+	</transDetail>
+	<transDetail id="14" groupid="2" title="Premium Content">
+		<type title="RMS Data">Ringtone</type>
+		<processed title="Processed">4(232 KB)</processed>
+		<available title="Available">0</available>
+		<status title="Status">0</status>
+	</transDetail>
+	<transDetail id="11" groupid="2" title="Premium Content">
+		<type title="RMS Data">Wallpaper</type>
+		<processed title="Processed">5(147 KB)</processed>
+		<available title="Available">0</available>
+		<status title="Status">0</status>
+	</transDetail>
+	<transDetail id="12" groupid="2" title="Premium Content">
+		<type title="RMS Data">Application</type>
+		<processed title="Processed">2(1010 KB)</processed>
+		<available title="Available">0</available>
+		<status title="Status">0</status>
+	</transDetail>
+	<transDetail id="5" groupid="2" title="Premium Content">
+		<type title="RMS Data">Video</type>
+		<processed title="Processed">3(216 KB)</processed>
+		<available title="Available">0</available>
+		<status title="Status">0</status>
+	</transDetail>
+	<transDetail id="3" groupid="2" title="Premium Content">
+		<type title="RMS Data">Image</type>
+		<processed title="Processed">3(110 KB)</processed>
+		<available title="Available">0</available>
+		<status title="Status">0</status>
+	</transDetail>
+	<transDetail id="2" groupid="1" title="Standard Content">
+		<type title="RMS Data">Calendar</type>
+		<processed title="Processed">13</processed>
+		<available title="Available">0</available>
+		<status title="Status">0</status>
+	</transDetail>
+	<transDetail id="1" groupid="1" title="Standard Content">
+		<type title="RMS Data">Phonebook</type>
+		<processed title="Processed">3</processed>
+		<available title="Available">0</available>
+		<status title="Status">0</status>
+	</transDetail>
+	<exception>
+		<skipitem contentid="1" ecode="5">&lt;Report&gt;&lt;Name&gt;Hide Maeda&lt;/Name&gt;&lt;HomeNumber&gt;&lt;/HomeNumber&gt;&lt;MobileNumber&gt;&lt;/MobileNumber&gt;&lt;Email&gt;&lt;/Email&gt;&lt;/Report&gt;</skipitem>
+		<skipitem contentid="1" ecode="5">&lt;Report&gt;&lt;Name&gt;Mamata Sanwal&lt;/Name&gt;&lt;HomeNumber&gt;&lt;/HomeNumber&gt;&lt;MobileNumber&gt;&lt;/MobileNumber&gt;&lt;Email&gt;&lt;/Email&gt;&lt;/Report&gt;</skipitem>
+		<skipitem contentid="1" ecode="5">&lt;Report&gt;&lt;Name&gt;Rae Jin&lt;/Name&gt;&lt;HomeNumber&gt;&lt;/HomeNumber&gt;&lt;MobileNumber&gt;&lt;/MobileNumber&gt;&lt;Email&gt;&lt;/Email&gt;&lt;/Report&gt;</skipitem>
+		<skipitem contentid="2" ecode="2">13_Todo_Nokia6020Todoo</skipitem>
+		<skipitem contentid="2" ecode="2">14_Todo_Nokia6020Todo/</skipitem>
+		<skipitem contentid="2" ecode="2">15_Todo_Nokia6020TodogEND:VTODO</skipitem>
+		<skipitem contentid="2" ecode="2">6_Event_Nokia6020Zj</skipitem>
+		<skipitem contentid="2" ecode="2"/>
+		<skipitem contentid="5" ecode="3">TestMOV.mov</skipitem>
+		<skipitem contentid="5" ecode="3">TestRM.rm</skipitem>
+		<skipitem contentid="11" ecode="3">WSpace.jfif</skipitem>
+		<skipitem contentid="15" ecode="3">TestMMF.mmf</skipitem>
+	</exception>
+	<version type="">Not available</version>
+	<version type="FDAndroid20.dll">51.0.1.82</version>
+	<version type="FDDetectComm.dll">1.2.100.5364</version>
+	<version type="FDRMSDU.exe">2.1.6.5422</version>
+	<version type="DllLoader.exe">55.0.122.274</version>
+	<returnvalue>
+		<path>C:\Program Files\Futuredial\ECS\RMS Web_Client\FDTemporary\Log\1.zip</path>
+		<description/>
+		<code>0</code>
+	</returnvalue>
+</transDetails>

@@ -1,0 +1,41 @@
+<TransLog>
+  <FDEMT_TransactionRecord>
+	<site>2</site>
+	<operator>17543</operator>
+	<company>1</company>
+    <operatorName>17521</operatorName>
+    <workstationName>SUCHI-MLQA</workstationName>
+    <sourceModel>PST_SAN_SCP-6760_USB_SPR</sourceModel>
+    <sourceMake>Sanyo</sourceMake>
+    <sourceCarrier>Sprint</sourceCarrier>
+    <targetModel>null</targetModel>
+    <targetMake>null</targetMake>
+    <targetCarrier>null</targetCarrier>
+    <operationStatus>0</operationStatus>
+    <operationType>9</operationType>
+    <storeName>12121</storeName>
+    <errorCode>1</errorCode>
+    <sourceConnectionType>cable</sourceConnectionType>
+    <targetConnectionType>null</targetConnectionType>
+    <timeCreated>2013-03-04 10:28:42</timeCreated>
+    <membershipCode />
+    <prlversion>2</prlversion>
+    <firmversion />
+    <timetaken>00:02:35</timetaken>
+    <custName>SUCHI-MLQA</custName>
+    <contentwipetime>2013-03-04 10:28:42</contentwipetime>
+    <refurbishedtime>2013-03-04 10:28:42</refurbishedtime>
+    <refurbishedstatus>50</refurbishedstatus>
+    <esnNumber>A00000123809FA</esnNumber>
+    <mac>D4:BE:D9:9A:1A:65</mac>
+    <serialnumber>353453535EFDS</serialnumber >
+    <devicememorysize>16GB</devicememorysize >
+    <modelnumber>A1387</modelnumber>
+    <appraisalID>A1387</appraisalID >
+   <po>A1387</po>
+   <so>A1387</so>
+   <rma>sdfs234324</rma>
+   <iosVersion>5.0.1</iosVersion >
+   <portNumber>12</portNumber >
+  </FDEMT_TransactionRecord>
+</TransLog>

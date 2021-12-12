@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ports>
+  <message></message>
+  <port label="1">
+    <id>HANDSET_ID_1</id>
+    <id>HANDSET_ID_1</id>
+    <id>HANDSET_ID_1</id>
+    <id>HANDSET_ID_1</id>
+  </port>
+  <port label="2">
+    <id>HANDSET_ID_1</id>
+    <id>HANDSET_ID_1</id>
+    <id>HANDSET_ID_1</id>
+    <id>HANDSET_ID_1</id>
+  </port>
+  <port label="3">
+    <id>HANDSET_ID_1</id>
+    <id>HANDSET_ID_1</id>
+    <id>HANDSET_ID_1</id>
+    <id>HANDSET_ID_1</id>
+  </port>
+</ports>

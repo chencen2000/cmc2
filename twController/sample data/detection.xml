@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<detection>
+  <label id="1">
+    <device vid="0fca" pid="8004" type="blackberry" id="PST_RIM_BLACKBERRY9650_USB_SPR">
+      <driverkey>{36fc9e60-c465-11cf-8056-444553540000}\0016</driverkey>
+      <manufacturer>RIM</manufacturer>
+      <product>RIM Composite Device</product>
+      <serialnumber>0782E99813B7DCEBBC4D085F4B8D62116362F4A8</serialnumber>
+      <model>BlackBerry 9650</model>
+      <carrier>Sprint</carrier>
+      <deviceid>a0000025b602d3</deviceid>
+      <pin>853968588</pin>
+      <carrierid>104</carrierid>
+      <os>6.0.0.706</os>
+      <platform>4.4.0.560</platform>
+      <comport>1</comport>
+    </device>
+  </label>
+</detection>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<labelinfo>
+  <label id="1">
+    <usbhub name="iusb3#root_hub30#4&amp;1a49b3c3&amp;0#{f18a0e88-c30c-11d0-8815-00a0c906bed8}" port="2" />
+  </label>
+  <device vid="05ac" pid="1292" type="iphone" id="PST_APE_IPHONE3G_USB_GSM">
+    <driverkey>{36fc9e60-c465-11cf-8056-444553540000}\0006</driverkey>
+    <manufacturer>Apple</manufacturer>
+    <product>iPhone</product>
+    <serialnumber>d0178e6d9a0b2f6aff31371498a6a2c427cbd1f2</serialnumber>
+    <model addbyrequest="True">iPhone3G 16G AT&amp;T</model>
+    <carrier addbyrequest="True">AT&amp;T</carrier>
+    <deviceid>011713004159310</deviceid>
+    <hardwaremodel>N82AP</hardwaremodel>
+    <buildversion>8C148</buildversion>
+    <modelnumber>MB705</modelnumber>
+    <producttype>iPhone1,2</producttype>
+    <productversion>4.2.1</productversion>
+    <iPhoneSerialNumber>88833JVB1R4</iPhoneSerialNumber>
+    <uniquechipid>4051967210796</uniquechipid>
+    <comport>1</comport>
+    <maker>Apple</maker>
+    <model>iPhone3G</model>
+    <carrier>GSM</carrier>
+    <firmwareFile addbyrequest="True">iPhone1,2_4.2.1_8C148_Restore</firmwareFile>
+    <prlFile>60652.prl</prlFile>
+    <dllname>iPhone_RPT.dll</dllname>
+    <profile>35</profile>
+    <msl>NO MSL</msl>
+    <meid_imei addbyrequest="True">011713004159310</meid_imei>
+  </device>
+  <runtime id="89">
+    <message>Refurbish</message>
+    <message2 addbyrequest="True">Successful- Device Activated</message2>
+    <progress>0</progress>
+    <time>0</time>
+    <model addbyrequest="True">Apple iPhone3G</model>
+    <carrier addbyrequest="True">AT&amp;T</carrier>
+    <meid addbyrequest="True">011713004159310</meid>
+    <serialnumber addbyrequest="True">88833JVB1R4</serialnumber>
+    <memory addbyrequest="True">16G</memory>
+    <modelnumber addbyrequest="True">MB705LL/A</modelnumber>
+    <barcode addbyrequest="True">C:\Users\dev\AppData\Local\Temp\011713004159310_9429_1.png</barcode>
+  </runtime>
+</labelinfo>
