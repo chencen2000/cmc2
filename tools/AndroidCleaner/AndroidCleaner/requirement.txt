@@ -1,0 +1,9 @@
+﻿根据刚才要求，现在需要release一个FD-PreCleaning Tool来删除Android系统上的以下内容：
+1.	SD Card上的文件，如照片，视频，下载的文件等，
+
+
+要求：
+1 做一个单独的exe，
+2 不和LOT一起run。前面想用FAE跑一下
+3 那就做一个吧！支持一个口就行了！
+4 有开始和结束及error code显示就行
