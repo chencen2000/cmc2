@@ -1,2 +1,5 @@
-﻿/twController/bin/Debug
-/twController/obj/x86/Debug
+﻿# /twController/bin/Debug
+# /twController/obj/x86/Debug
+**/bin
+**/obj
+**/.vs
