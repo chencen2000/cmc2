@@ -142,7 +142,11 @@ System::Tuple<int, int, System::String^>^ run_exe(System::String^ exe, System::S
 			p->Kill();
 			ret = ERROR_TIMEOUT;
 		}
-
+	}
+	else 
+	{
+		LogIt(System::String::Format("run_exe: {0} NOT found.", exe));
+		ret = ERROR_FILE_NOT_FOUND;
 	}
 	LogIt(System::String::Format("run_exe: -- ret={0}", ret));
 	return gcnew System::Tuple<int, int, System::String^>(ret, exit_code, s);
@@ -151,17 +155,27 @@ System::Tuple<int, int, System::String^>^ run_exe(System::String^ exe, System::S
 int removeDeviceByInstanceIdv3(System::String^ diid, int timeout) {
 	int ret = ERROR_INVALID_PARAMETER;
 	LogIt(System::String::Format("removeDeviceByInstanceIdv3: [{0}] ++ diid={0}", diid));
-	System::String^ exe = System::IO::Path::Combine(System::Environment::GetEnvironmentVariable("SystemRoot"), "System32", "pnputil.exe");
-	System::String^ arg = System::String::Format("/remove-device \"{0}\"", diid);
-	System::Tuple<int, int, System::String^>^ r = run_exe(exe, arg, timeout);
-	if (r->Item1 == NO_ERROR) {
-		if (r->Item2 == NO_ERROR)
-			ret = NO_ERROR;
+	PVOID OldValue = NULL;
+	if (Wow64DisableWow64FsRedirection(&OldValue))
+	{
+		System::String^ exe = System::IO::Path::Combine(System::Environment::GetEnvironmentVariable("SystemRoot"), "System32", "pnputil.exe");
+		System::String^ arg = System::String::Format("/remove-device \"{0}\"", diid);
+		System::Tuple<int, int, System::String^>^ r = run_exe(exe, arg, timeout);
+		if (r->Item1 == NO_ERROR) {
+			if (r->Item2 == NO_ERROR)
+				ret = NO_ERROR;
+			else
+				ret = r->Item2;
+		}
 		else
-			ret = r->Item2;
+			ret = r->Item1;
+		Wow64RevertWow64FsRedirection(OldValue);
 	}
-	else
-		ret = r->Item1;
+	else 
+	{
+		ret = GetLastError();
+		LogIt(System::String::Format("removeDeviceByInstanceIdv3: [{0}]: fail to disable WOW64 FS redirection ({1})", diid, ret));
+	}
 	LogIt(System::String::Format("removeDeviceByInstanceIdv3: [{0}] -- ret={1}", diid, ret));
 	return ret;
 }

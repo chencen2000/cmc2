@@ -3,3 +3,5 @@
 **/bin
 **/obj
 **/.vs
+/tools/UsbDeviceCleanup/Debug
+/tools/UsbDeviceCleanup/UsbDeviceCleanup/Debug

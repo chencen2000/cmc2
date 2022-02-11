@@ -1,0 +1,48 @@
+### imei2model
+GET http://dc.futuredial.com/cmc/imei2model HTTP/1.1
+Authorization: Basic cmc cmc1234!
+
+### access mc.futuredial.com
+POST https://mc.futuredial.com/getfileinfo/
+Authorization: Basic fdus 392potrero
+Content-Type: application/x-www-form-urlencoded
+
+pcname=Chris-PC
+&macaddress=020000000000
+&filetype=PCFiles
+&filename=HydraV5_CMCInstaller_v1.46.exe
+
+### list files for PCName=Chris-PC
+POST https://mc.futuredial.com/getfiles/
+Authorization: Basic fdus 392potrero
+Content-Type: application/x-www-form-urlencoded
+
+pcname=Chris-PC
+&filetype=PCFiles
+
+
+### list files
+POST https://mc.futuredial.com/getfiles/
+Authorization: Basic fdus 392potrero
+Content-Type: application/x-www-form-urlencoded
+
+pcname=athena.history
+&macaddress=0A-00-20-21-04-10
+&filetype=PCFiles
+
+### list files
+POST https://mc.futuredial.com/getfiles/
+Authorization: Basic fdus 392potrero
+Content-Type: application/x-www-form-urlencoded
+
+pcname=DESKTOP-UHJU7MG
+&filetype=TransactionLog
+
+### list files
+POST https://mc.futuredial.com/getfiles/
+Authorization: Basic fdus 392potrero
+Content-Type: application/x-www-form-urlencoded
+
+pcname=DESKTOP-UHJU7MG
+&filetype=TransactionLog
+&nextcontinuationtoken=61e88f751c6a09275e4d99ff
