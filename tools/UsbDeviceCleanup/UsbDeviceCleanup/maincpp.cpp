@@ -344,6 +344,7 @@ int main(array<System::String^>^ args)
         System::Threading::EventWaitHandle^ e = gcnew System::Threading::EventWaitHandle(false, System::Threading::EventResetMode::ManualReset, stag, own);
         if (own) {
 			prepare_log();
+			LogIt("Version: 22.2.11.4");
             ret = start_service(_args->Parameters, e);
             e->Close();
 			upload_log();
@@ -362,7 +363,7 @@ int main(array<System::String^>^ args)
                 e->Set();
             }
         }
-        catch (System::Exception^ e)
+        catch (System::Exception^)
         {
 
         }
