@@ -5,3 +5,5 @@
 **/.vs
 /tools/UsbDeviceCleanup/Debug
 /tools/UsbDeviceCleanup/UsbDeviceCleanup/Debug
+/tools/UsbDeviceCleanup/Release
+/tools/UsbDeviceCleanup/UsbDeviceCleanup/Release
